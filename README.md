@@ -4,4 +4,4 @@
 
 ## Содержание:
 
-[Задача о поиске островов в двухмерном массиве](https://github.com/Arhiser/exercises/blob/master/src/com/arhitutorials/task1/Task1.java)
+[Задача о поиске островов в двухмерном массиве](https://github.com/Arhiser/exercises/blob/master/src/com/arhitutorials/task1/Task1.md)
