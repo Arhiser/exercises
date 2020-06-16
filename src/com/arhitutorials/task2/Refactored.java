@@ -16,7 +16,7 @@ public class Refactored {
             years.add(Integer.toString(i));
         }
         try {
-            Map<String, StatItem> stats = loadStats(years);
+            Map<String, StatItem> stats = loadDatas(years);
             writeStats(stats);
         } catch (IOException e) {
             System.out.println("Ааааа! Все пропалоооо!");
@@ -33,7 +33,7 @@ public class Refactored {
         }
     }
 
-    private static Map<String, StatItem> loadStats(List<String> years) throws IOException {
+    private static Map<String, StatItem> loadDatas(List<String> years) throws IOException {
         TreeMap<String, StatItem> stats = new TreeMap<>();
         File file = new File(".\\src\\com\\arhitutorials\\task2\\1.txt");
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
@@ -70,9 +70,9 @@ public class Refactored {
                         .append(item.count > 0 ? ((double) item.total) / item.count : 0)
                         .append('\n');
                 writer.write(sb.toString());
-                writer.flush();
                 i++;
             }
+            writer.flush();
         }
     }
 }
